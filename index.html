@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="icon" href="icons8-lo-fi-100.svg" type="image/svg+xml">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>inicio</title>
+</head>
+<body>
+    
+    <header>
+        <div id="cont">
+            <a href="#">
+                <p><a href="#">Musícas</a></p>
+            </a>
+            <p><a href="#">Fotos</a></p>
+            <p><a href="#">Álbuns</a></p>
+            <p><a href="#">Ínicio</a></p>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <p>Login</p>
+            <input type="text" placeholder="Login" id="login">
+            <input type="password" placeholder="Senha" id="senha">
+            <input type="submit" onclick="logar(); return false">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>gostou? ;)</p>
+    </footer>
+
+    <script>
+
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('Sucesso ;)');
+                location.href = "lista.html"
+            } else{
+                alert('Usuario ou senha incorretos')
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
